@@ -2,6 +2,12 @@
 from django.http.response import HttpResponse, JsonResponse
 import random
 
+from django.shortcuts import render
+
+
+def home(request):
+    return render(request, "home.html")
+
 
 def helloworld(request):
     return HttpResponse("<h1>Hello World</h1>")

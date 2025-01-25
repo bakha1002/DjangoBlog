@@ -19,6 +19,7 @@ from .views import *
 
 
 urlpatterns = [
+    path("", home),
     path("hello/", helloworld),
     path("hello/json/", helloworld_json),
     path("random/", random_number),
