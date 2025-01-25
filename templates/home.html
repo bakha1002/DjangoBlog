@@ -8,11 +8,11 @@
 <div class="grid-container" id="blogGrid"></div>
 
 <script>
-    axios.get('/api/blog/')
+    axios.get('/api/blog/viewset/')
     .then(function (response){
         const blogGrid=document.getElementById('blogGrid')
 
-        response.data.blog_list.forEach(blog => {
+        response.data.data.forEach(blog => {
             console.log(blog)
             const blogCard = document.createElement('div')
             blogCard.classList.add('blog-card')

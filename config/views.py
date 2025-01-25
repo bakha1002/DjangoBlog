@@ -1,12 +1,8 @@
 
 from django.http.response import HttpResponse, JsonResponse
 import random
-
+from django.views import View
 from django.shortcuts import render
-
-
-def home(request):
-    return render(request, "home.html")
 
 
 def helloworld(request):
@@ -20,3 +16,8 @@ def helloworld_json(request):
 def random_number(request):
     random_number = random.randint(1, 10000)
     return HttpResponse(f"<h1>Random Number: {random_number}</h1>")
+
+
+class HomeView(View):
+    def get(self, request):
+        return render(request, "home.html")
