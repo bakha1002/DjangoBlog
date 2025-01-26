@@ -3,6 +3,8 @@
 
 {% block content %}
 
+<h1>나의 블로그</h1>
+
 <div class="grid-container" id="blogGrid"></div>
 <div class="pagination-container" id="blogPagination"></div>
 
@@ -14,7 +16,7 @@ $(document).ready(function() {
 });
 
 function blogListGrid(pageNum = 1) {
-    axios.get(`/api/blog/viewset/?page=${pageNum}`)
+    axiosInstance.get(`/api/blog/generic/?page=${pageNum}`)
     .then(data => data.data)
         .then(data => {
             

@@ -25,5 +25,6 @@ urlpatterns = [
     path("random/", random_number),
     path("blog/", include('blog.urls')),
     path("api/blog/", include('blog.api_urls')),
+    path("auth/", include('rest_framework.urls')),
     path('admin/', admin.site.urls),
 ]
